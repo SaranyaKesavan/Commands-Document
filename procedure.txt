@@ -1,0 +1,71 @@
+Procedures for django-rest-framework: (https://www.youtube.com/watch?v=B38aDwUpcFc&t=903s)
+(https://www.django-rest-framework.org/tutorial/)
+
+    After creating a django app say app_basics under project say wp_poc
+    1. Goto settings.py and add 'rest_framework' & 'app_basics' (your app name) under INSTALLED_APPS
+    2. To create a new model:
+        Goto models.py and add the new model class say Article (refer models.py file in wp_poc)
+    3. To show that model in django admin panel / UI :
+        Goto to admin.py and import that model (say Article) from models as follows
+        
+        [from .models import Article]
+        
+        Then register the model using the following code
+        
+        [admin.site.register(Article)]
+    
+    4. After making changes to models.py and admin.py :
+        Goto to your project location in cmd (say wp_poc location)
+        then run the following commands to migrate the models
+
+        [python manage.py makemigrations]
+        [python manage.py migrate]
+    
+    5. To check / see the Article model in django admin UI:
+        run the dajango server using the following commands
+
+        [python manage.py runserver]
+
+        Goto the url http://127.0.0.1:8000/admin/ to see the article model
+
+    SERIALIZATION: (https://www.django-rest-framework.org/tutorial/1-serialization/)
+
+    6. Create a new file say "serializers.py" under app_basics to create a serializer class
+
+    7. import the serializers  class from rest rest_framework using the following command:
+
+       [from rest_framework import serializers] 
+
+    8. Then import the model also 
+
+        [from .models import Article]
+
+    9. Create a serializer class say "ArticleSerializer" which inherits "serializers.Serializer"
+
+    10. when using the "serializers.Serializer" you have to specify all the fields that are defined in the models.py
+        Instead, if you use "serializers.ModelSerializer" no need to specify those fields defined in the models.py
+
+    11. Add a create() & update() functions to the Class "ArticleSerializer"
+
+    12. Create new session of your project and run the following command to open the interactive python shell under wp_loc location
+        
+        [python manage.py shell]   
+
+        # need to go through
+        from api_basic.models import Article
+        from api_basics.serializers import ArticleSerializer
+        from rest_framework.renderers import JSONRenderer
+        from rest_framework.parsers import JSONparser
+        a = Article(title = 'Article 001', author = 'Saranya', email = 'saranya@gmail.com')
+        a.save()
+        a = Article(title = 'Article 002', author = 'Saranya2', email = 'saranya2@gmail.com')
+        a.save()
+        serializer = ArticleSerializer(a)
+        serializer.data  #returns a dictionary
+        # to get json data
+        content = JSONRenderer().render(serializer.data)
+        content   # returns json data
+
+        serializer = ArticleSerializer(Article.objects.all(), many=True)
+        serializer.data 
+        
