@@ -1,0 +1,34 @@
+For Windows 10 (cmd):
+
+1. To check pip installed or not :
+    python -m pip --version
+
+2. To check python version:
+    py --version
+
+3.To upgrade pip version:
+    python -m pip install --upgrade pip
+
+4. Setting up Django : (https://docs.djangoproject.com/en/3.0/howto/windows/)
+    
+    1. Install python and add it to path
+    2. Install pip if not installed
+    3. Install virtualenv and virtualenvwrapper : (not mandatory; best practices)
+       py -m pip install virtualenvwrapper-win
+    
+    4. Create new virtual environment for the project:
+        mkvirtualenv myproject (required project name)
+        
+        [By default virtualenv will be activate like (myproject)
+         when opening new cmd activate it again using the following command]
+    
+    5. To activate virtualenv again:
+        workon myproject
+
+    6. Installing Django:
+        -->go inside virtualenv    
+        py -m pip install Django
+    
+    7. To verify django installation:
+        django-admin --version
+        
