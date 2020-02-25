@@ -1,0 +1,12 @@
+For Windows 10 (cmd): (https://www.django-rest-framework.org/)
+1. Install python and Django
+2. To install django rest framework:
+    pip install djangorestframework
+
+(OPTIONAL)
+3. To install markdown:
+    pip install markdown  #markdown support for the browsable API
+4. To install django filter:
+    pip install django-filter  #For Filtering support
+
+5. Add 'rest_framework' to INSTALLED_APPS in settings.py

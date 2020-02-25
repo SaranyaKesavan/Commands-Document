@@ -32,3 +32,26 @@ For Windows 10 (cmd):
     7. To verify django installation:
         django-admin --version
         
+2. Working with Django:
+    (Goto the folder where you want to create new django progect
+        & do workon urprojectenv-name)
+
+    1. To start the django project:
+        django-admin startproject projectname
+    
+    2. To Make migration (Don't know why?)
+        python manage.py migrate
+
+    3. To run the django server:
+        python manage.py runserver
+    
+    4. To start a django app:
+        python manage.py startapp appname
+
+    5. To create superuser:
+        python manage.py createsuperuser
+
+    Other Commands:
+    1. To make migrations:
+        python manage.py makemigration
+        (then do step 2)
