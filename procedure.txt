@@ -1,5 +1,5 @@
 Procedures for django-rest-framework: (https://www.youtube.com/watch?v=B38aDwUpcFc&t=903s)
-(https://www.django-rest-framework.org/tutorial/)
+                                      (https://www.django-rest-framework.org/tutorial/)
 
     After creating a django app say app_basics under project say wp_poc
     1. Goto settings.py and add 'rest_framework' & 'app_basics' (your app name) under INSTALLED_APPS
