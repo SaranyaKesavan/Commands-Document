@@ -57,3 +57,22 @@ For Windows 10 (cmd):
         (then do step 2)
     2. To override all the static files with the updated static files:
         python manage.py collectstatic
+        
+    
+    
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    
+   ** Adding virtual environment using python itself (from python 3.6 & greater) instead of pip:
+   1. For Windows 10 (in cmd):
+        
+        CREATING Venv:
+            cmd : python -m venv path of venv
+            eg  : python -m venv ./btrevenv    #to create inside current directory else can use absolute path
+        
+       ACTIVATING Venv:
+            cmd : absolutepath\btrevenv\Scripts\activate.bat
+        
+        
+        
+       
+    
