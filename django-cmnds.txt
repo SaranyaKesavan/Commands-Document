@@ -39,7 +39,7 @@ For Windows 10 (cmd):
     1. To start the django project:
         django-admin startproject projectname
     
-    2. To Make migration (Don't know why?)
+    2. To migrate the updated changes to the connected db
         python manage.py migrate
 
     3. To run the django server:
@@ -55,3 +55,5 @@ For Windows 10 (cmd):
     1. To make migrations:
         python manage.py makemigration
         (then do step 2)
+    2. To override all the static files with the updated static files:
+        python manage.py collectstatic
