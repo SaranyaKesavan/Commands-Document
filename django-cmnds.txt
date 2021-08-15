@@ -16,13 +16,13 @@ For Windows 10 (cmd):
     3. Install virtualenv and virtualenvwrapper : (not mandatory; best practices)
        py -m pip install virtualenvwrapper-win
     
-    4. Create new virtual environment for the project:
-        mkvirtualenv myproject (required project name)
+    4. Create new virtual wrapper for the project:  ## try to avoid using virtual wrapper instead use virtualenv
+        mkvirtualenv myproject (required wrapper name)
         
         [By default virtualenv will be activate like (myproject)
          when opening new cmd activate it again using the following command]
     
-    5. To activate virtualenv again:
+    5. To activate virtual wrapper again:
         workon myproject
 
     6. Installing Django:
@@ -60,6 +60,15 @@ For Windows 10 (cmd):
         
     
     
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. Creating virtual environment in windows 10 using python virtual environment:
+ 
+    Ref: https://www.geeksforgeeks.org/creating-python-virtual-environment-windows-linux/
+    
+    windows: 
+        1. pip install virtualenv
+        2. virtualenv env_name
+        3. source env_name\Scripts\activate
     ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
    ** Adding virtual environment using python itself (from python 3.6 & greater) instead of pip:
